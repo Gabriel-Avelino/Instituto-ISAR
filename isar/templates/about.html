@@ -1,0 +1,48 @@
+{% extends 'background.html' %}
+{% load static i18n %}
+{% block head_title %}
+    Sobre Nós - Imobiliária São João Batista
+{% endblock head_title%}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock extra_head %}
+{% block content %}
+    <main>
+        <div class="section introduction about-banner">
+            <h1>Sobre Nós</h1>
+        </div>
+        <div class="section about">
+            <img class='img-about' src="{% static 'img/atendimento.jpg' %}" alt="">
+            <div class="text-box">
+                <p class='text justify'><e class='blue'>Na Imobiliária São João Batista, acreditamos que o imóvel certo pode transformar vidas.</e> Somos uma empresa dinâmica e moderna, pronta para oferecer a você mais do que uma simples compra ou locação. Queremos proporcionar a realização dos seus sonhos. 
+                </p>
+                <p class='text justify'>Com uma equipe de especialistas, oferecemos um atendimento focado em cada detalhe, garantindo que o processo seja fácil, seguro e adaptado às suas necessidades.</p>
+            </div>
+        </div>
+        <div class="section about gray">
+            <div class="text-box">
+                <p class='text justify'><e class='turquoise'>Nosso diferencial está na proximidade com nossos clientes.</e> Cada pessoa que passa por aqui não é apenas um número é uma história que nos dedicamos a entender. Por isso, não vendemos apenas imóveis, mas sim a possibilidade de criar novos começos, seja na compra do primeiro lar, na gestão de patrimônios ou na escolha do local perfeito para seus negócios.
+                </p>
+                <p class='text justify'>Se você busca alguém que esteja ao seu lado em cada etapa, com transparência, agilidade e compromisso, encontrou a imobiliária certa.</p>
+            </div>
+            <img class='img-about' src="{% static 'img/diferencial.jpg' %}" alt="">
+        </div>
+        <div class="mission">
+            <div class="valores-box">
+                <p class='valores justify'><b class='blue'>Missão</b> <br> Facilitar a realização de sonhos imobiliários, oferecendo serviços de administração e gestão de imóveis com transparência e foco na satisfação plena dos nossos clientes.</p>
+                <p class='valores justify'><b class='blue'>Visão</b> <br> Reinventar a gestão imobiliária para potencializar o valor dos imóveis, transformando espaços comuns em experiências excepcionais e conectando histórias de vida.</p>
+                <div class="valores justify"><b class='blue'>Valores</b> 
+                    <ul>
+                        <li>Transparência</li>
+                        <li>Compromisso Real</li>
+                        <li>Relações Autênticas</li>
+                        <li>Senso de Possibilidade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="finally">
+            <p class='text blue'><b>"Comprometidos em facilitar sua jornada na compra e venda de imóveis, garantimos as melhores soluções para você."</b></p>
+        </div>
+    </main>
+{% endblock content %}
