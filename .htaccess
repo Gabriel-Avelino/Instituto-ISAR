@@ -1,0 +1,14 @@
+# Configuração atual
+AddHandler fcgid-script .fcgi
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.fcgi/$1 [QSA,L]
+
+# Regras para arquivos estáticos
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^static/(.*)$ /staticfiles/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^media/(.*)$ /media/$1 [L]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# (mantido o restante do conteúdo do .htaccess)
