@@ -33,14 +33,13 @@
 
 .info-contato h3{
     font-size: 24px;
-    color: #B08A4F;
+    color: #17A8BC;
     font-weight: 900;
-    margin-bottom: 30px;
 }
 
 .info-contato .line{
     width: 80%;
-    border: 1px solid #b22c2c;
+    border: 1px solid #17A8BC;
     margin: 5px 0 40px;
 }
 
@@ -117,17 +116,16 @@
 }
 
 .contato .form-contact .text {
-    color: #303030;
+    color: #1B2557;
     font-weight: 900;
     text-align: justify;
 }
 
 .form-contact .fale-conosco{
     width: 100%;
-    background-color: #303030;
+    background-color: #1B2557;
     padding: 7% 7%;
     border-radius: 30px;
-    margin-top: 20px;
 }
 
 .fale-conosco .form{

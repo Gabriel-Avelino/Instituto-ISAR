@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
-from .models import Documento, Imovel, Estado, Cidade, Bairro, Regiao, Tipo
+from .models import Documento
 from django.views.decorators.http import require_GET
 from blog.models import Post, ImagemNoticia
 from collections import OrderedDict
@@ -22,7 +22,8 @@ def index(request):
 
 def sobreNos(request):
     return render(request, 'about.html')
-        
+
+'''     
 def imoveis(request):
     imoveis = Imovel.objects.all()
     estados = Estado.objects.all()
@@ -33,7 +34,7 @@ def imovel(request, id):
     imovel = Imovel.objects.get(id=id)
     sugestoes = Imovel.objects.filter(tipo=imovel.tipo, cidade=imovel.cidade, estado=imovel.estado, bairro=imovel.bairro, regiao=imovel.regiao).filter(~Q(id=imovel.id))
     return render(request, 'imovel.html', {'imovel': imovel, 'sugestions': sugestoes})
-
+'''  
 
 def transparencia(request):
     # Cria um OrderedDict para garantir a ordem dos dropdowns
@@ -74,8 +75,8 @@ def contato(request):
         send_mail(
             'Mensagem de {}: {}'.format(name, assunto),
             'Nome: {} \nEmail: {} \nTelefone: {} \nAssunto: {} \nMensagem: {}'.format(name, email, telefone, assunto, mensagem),
-            "ti@enjoysolucoes.med.br",
-            ["contato@enjoysolucoes.med.br"],
+            "ti@institutoisar.com.br",
+            ["administrativo@institutoisar.com.br"],
             fail_silently=False,
         )
         messages.success(request, 'Formulário enviado com sucesso!')
@@ -91,6 +92,7 @@ def noticia(request, id):
     fotos = ImagemNoticia.objects.filter(noticia=post)
     return render(request, 'noticia.html',{'post': post, 'sugestoes': sugestoes, 'current_url': current_url, 'fotos': fotos})
 
+'''
 @require_GET
 def get_options(request):
     estado = request.GET.get('estado')
@@ -169,3 +171,4 @@ def reset_filtro(request):
     tipos = list(Tipo.objects.values_list('name', flat=True))
 
     return JsonResponse({'imoveis': imoveis, 'estados': estados, 'tipos': tipos}) 
+'''

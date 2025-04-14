@@ -18,23 +18,17 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include, re_path
-from isar.views import index, transparencia, imoveis, imovel, contato, noticias, sobreNos, noticia, get_options, get_imoveis, reset_filtro
-
+from isar.views import index, transparencia, contato, noticias, sobreNos, noticia
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^summernote/', include('django_summernote.urls')),
     path('', index, name='home'),
     path('sobre-nos', sobreNos, name='sobre-nos'),
-    path('imoveis', imoveis, name='imoveis'),
-    path('imovel/<int:id>', imovel, name='imovel'),
     path('transparencia', transparencia, name='transparencia'),
     path('contato', contato, name='contato'),
     path('noticias', noticias, name='noticias'),
     path('noticia/<int:id>', noticia, name='noticia'),
-    path('get_options/', get_options, name='get_options'),
-    path('get_imoveis/', get_imoveis, name='get_imoveis'),
-    path('reset_filtro/', reset_filtro, name='reset_filtro')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

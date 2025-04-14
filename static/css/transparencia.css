@@ -24,7 +24,7 @@
 .dropdown {
     width: 100%;
     cursor: pointer;
-    color: #3E445B;
+    color: #1B2557;
     font-weight: 900;
     font-size: 20px;
     padding: 10px;
@@ -34,7 +34,7 @@
 }
 
 .dropdown:hover {
-    color: #ebbf8b;
+    color: #17A8BC;
 }
 
 .border{
