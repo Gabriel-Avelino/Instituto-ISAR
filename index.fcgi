@@ -1,4 +1,4 @@
-#!/usr/bin/scl enable rh-python35 -- /home4/lkhold21/institutoisar.com.br/.venv/bin/python
+#!/usr/bin/scl enable rh-python35 -- /home2/enjoys07/institutoisar.com.br/.venv/bin/python
 
 import os
 import sys
@@ -6,7 +6,7 @@ from flup.server.fcgi import WSGIServer
 from django.core.wsgi import get_wsgi_application
 
 # Adicione o caminho ao seu projeto e ao ambiente virtual
-sys.path.insert(0, "/home4/lkhold21/institutoisar.com.br/Site-Instituto-Socioambiental-Renovar")
+sys.path.insert(0, "/home2/enjoys07/institutoisar.com.br/Site-Instituto-Socioambiental-Renovar/")
 os.environ['DJANGO_SETTINGS_MODULE'] = "core.settings"
 
 def application(environ, start_response):
