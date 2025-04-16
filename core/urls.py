@@ -2,13 +2,14 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
-from isar.views import index, transparencia, contato, noticias, sobreNos, noticia
+from isar.views import index, transparencia, contato, noticias, sobreNos, noticia, governanca
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'^$', index, name='home'),
     url(r'^sobre-nos$', sobreNos, name='sobre-nos'),
+    url(r'^governanca$', governanca, name='governanca'),
     url(r'^transparencia$', transparencia, name='transparencia'),
     url(r'^contato$', contato, name='contato'),
     url(r'^noticias$', noticias, name='noticias'),
